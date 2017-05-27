@@ -12,9 +12,7 @@
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="${pageContext.request.contextPath}/">Home</a></li>
-				<li><a href="${pageContext.request.contextPath}/outra-pagina">Outra
-						Página</a></li>
+				<%@ include file="menu-itens.jsp"%>
 			</ul>
 		</div>
 	</div>

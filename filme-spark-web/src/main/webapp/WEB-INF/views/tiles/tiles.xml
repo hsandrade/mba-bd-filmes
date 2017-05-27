@@ -25,10 +25,14 @@
 		<put-attribute name="body" value="/WEB-INF/views/jsp/index.jsp" />
 	</definition>
 
-	<!-- Product Page -->
 	<definition name="outra-pagina" extends="base-definition">
 		<put-attribute name="title" value="Outra página" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/outra-pagina.jsp" />
 	</definition>
+	
+	<definition name="teste-rest-spark" extends="base-definition">
+		<put-attribute name="title" value="Teste resultado REST do Spark" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/teste-rest-spark.jsp" />
+	</definition>	
 
 </tiles-definitions>
