@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Base Definition -->
+	<definition name="base-definition"	template="/WEB-INF/views/tiles/layouts/default-layout.jsp">
+		<put-attribute name="title" value="" />
+		
+		<put-attribute name="header"
+			value="/WEB-INF/views/tiles/template/default-header.jsp" />
+		
+		<put-attribute name="menu"
+			value="/WEB-INF/views/tiles/template/default-menu.jsp" />
+		
+		<put-attribute name="body" value="" />
+		
+		<put-attribute name="footer"
+			value="/WEB-INF/views/tiles/template/default-footer.jsp" />
+	</definition>
+
+	<!-- Home Page -->
+	<definition name="index" extends="base-definition">
+		<put-attribute name="title" value="Bem-vindo" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/index.jsp" />
+	</definition>
+
+	<!-- Product Page -->
+	<definition name="outra-pagina" extends="base-definition">
+		<put-attribute name="title" value="Outra página" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/outra-pagina.jsp" />
+	</definition>
+
+</tiles-definitions>

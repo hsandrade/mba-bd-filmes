@@ -17,7 +17,7 @@ import br.ufrj.mba.eng30.filme.spark.web.model.JobserverResult;
 @RestController
 public class ConsultaRestController {
 	// simular o parse de um String de resposta para um objeto
-	private Gson gson = new GsonBuilder().setPrettyPrinting().create();
+	private Gson gson = new GsonBuilder().create();
 	private RestTemplate restTemplate = new RestTemplate();
 
 	@RequestMapping(value = "/rest/cliente", method = RequestMethod.GET)
