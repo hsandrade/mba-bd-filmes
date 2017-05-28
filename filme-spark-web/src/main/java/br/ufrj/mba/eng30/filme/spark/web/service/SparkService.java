@@ -10,11 +10,12 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import br.ufrj.mba.eng30.filme.spark.web.model.Cliente;
+import br.ufrj.mba.eng30.filme.spark.web.model.Filme;
 import br.ufrj.mba.eng30.filme.spark.web.model.JobserverResult;
 
 /**
  * Classe principal para executar os servi&ccedil;os Spark.
- * @author cassi
+ * @author Henrique
  *
  */
 @Service
@@ -22,22 +23,37 @@ public class SparkService {
 	private RestTemplate restTemplate = new RestTemplate();
 	private Gson gson = new GsonBuilder().create();
 	
-	public List<Cliente> getClientesSpark() {
+	public List<Cliente> getClientes() {
 		JobserverResult jobRes = restTemplate.postForObject(
-				"http://54.190.0.205:8090/jobs?appName=servico-filme2&context=mba-context&classPath=br.ufrj.mba.eng30.filme.spark.servico.TesteObserverSQL&sync=true&timeout=60",
+				String.format(ConstantesSpark.TEMPLATE_URL_SPARK, "TesteObserverSQL"),
 				"idCliente = 1001",
 				JobserverResult.class);
 
-		System.out.println(jobRes.getJobId());
-		
-		List<Cliente> listResult = new ArrayList<>();
-		
+		return getListResultGeneric(jobRes, Cliente.class);
+	}
+	
+	public List<Filme> getTopFilmesRentaveis(int qtdTop) {
+		JobserverResult jobRes = restTemplate.postForObject(
+				String.format(ConstantesSpark.TEMPLATE_URL_SPARK, "TopFilmeRentavel"),
+				"top=" + qtdTop,
+				JobserverResult.class);
+
+		return getListResultGeneric(jobRes, Filme.class);
+	}	
+
+	/**
+	 * Retorna uma lista genérica de acordo com o resultado do job.
+	 * @param jobRes
+	 * @param obj
+	 * @return 
+	 */
+	private <T> List<T> getListResultGeneric(JobserverResult jobRes, Class<T> obj) {
+		List<T> listResult = new ArrayList<>();
 		if (jobRes.getResult() != null) {
 			for (String r : jobRes.getResult()) {
-				listResult.add(gson.fromJson(r, Cliente.class));
+				listResult.add(gson.fromJson(r, obj));
 			}
-		}
-		
+		}		
 		return listResult;
 	}
 	

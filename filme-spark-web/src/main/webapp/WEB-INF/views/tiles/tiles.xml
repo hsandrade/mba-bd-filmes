@@ -33,6 +33,11 @@
 	<definition name="teste-rest-spark" extends="base-definition">
 		<put-attribute name="title" value="Teste resultado REST do Spark" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/teste-rest-spark.jsp" />
-	</definition>	
+	</definition>
+	
+	<definition name="filme-top-rentavel" extends="base-definition">
+		<put-attribute name="title" value="Top Filmes Rentáveis" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/filme-top-rentavel.jsp" />
+	</definition>		
 
 </tiles-definitions>

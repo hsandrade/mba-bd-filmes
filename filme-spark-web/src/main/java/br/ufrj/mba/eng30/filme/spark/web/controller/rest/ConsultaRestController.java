@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import br.ufrj.mba.eng30.filme.spark.web.model.Cliente;
+import br.ufrj.mba.eng30.filme.spark.web.model.Filme;
 import br.ufrj.mba.eng30.filme.spark.web.service.SparkService;
 
 @RestController
@@ -34,7 +36,17 @@ public class ConsultaRestController {
 
 	@RequestMapping(value = "/rest/cliente-spark")
 	public List<Cliente> getClientesJobServer() {
-		return sparkService.getClientesSpark();
+		return sparkService.getClientes();
 	}
+
+	@RequestMapping(value = "/rest/filmes/rentaveis")
+	public List<Filme> getTopFilmeRentaveis() {
+		return sparkService.getTopFilmesRentaveis(10);
+	}
+	
+	@RequestMapping(value = "/rest/filmes/rentaveis/{qtdTop}")
+	public List<Filme> getTopFilmeRentaveis(@PathVariable("qtdTop") int qtdTop) {
+		return sparkService.getTopFilmesRentaveis(qtdTop);
+	}	
 
 }

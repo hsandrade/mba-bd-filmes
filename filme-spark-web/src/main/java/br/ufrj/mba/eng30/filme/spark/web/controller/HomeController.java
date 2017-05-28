@@ -29,8 +29,13 @@ public class HomeController {
 	
 	@RequestMapping(value="/teste-rest-spark", method=RequestMethod.GET)
 	public String testeRestSpark(ModelMap model) {
-		model.addAttribute("resultRest", sparkService.getClientesSpark());
+		model.addAttribute("resultRest", sparkService.getClientes());
 		return "teste-rest-spark";
-	}		
+	}
+	
+	@RequestMapping(value="/filme-top-rentavel", method=RequestMethod.GET)
+	public String filmeTopRentavel(ModelMap model) {
+		return "filme-top-rentavel";
+	}	
 	
 }

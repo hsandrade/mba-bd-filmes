@@ -13,8 +13,13 @@
 <link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="static/css/filme.css">
 
-<script src="static/js/jquery-3.2.1.min.js"></script>
-<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/plugin/jquery-3.2.1.min.js"></script>
+<script src="static/js/plugin/bootstrap.min.js"></script>
+<script src="static/js/plugin/amcharts/amcharts.js"></script>
+<script src="static/js/plugin/amcharts/serial.js"></script>
+<script src="static/js/plugin/amcharts/dataloader.min.js"></script>
+<script src="static/js/plugin/amcharts/light.js"></script>
+<script src="static/js/filme-default.js"></script>
 </head>
 
 <body>
@@ -28,6 +33,9 @@
 				<tiles:insertAttribute name="menu" />
 			</div>
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<div class="page-header">
+					<h1><tiles:getAsString name="title" /></h1>
+				</div>
 				<tiles:insertAttribute name="body" />
 			</div>
 		</div>
