@@ -18,6 +18,10 @@ public class Filme {
 	private String generos;
 	@SerializedName("gross")
 	private long arrecadacaoLocal;
+	@SerializedName("num_voted_users")
+	private long qtdVotos;
+	@SerializedName("imdb_score")
+	private long mediaVotos;	
 
 	public String getTitulo() {
 		return titulo;
@@ -49,6 +53,22 @@ public class Filme {
 
 	public void setArrecadacaoLocal(long arrecadacaoLocal) {
 		this.arrecadacaoLocal = arrecadacaoLocal;
+	}
+
+	public long getQtdVotos() {
+		return qtdVotos;
+	}
+
+	public void setQtdVotos(long qtdVotos) {
+		this.qtdVotos = qtdVotos;
+	}
+
+	public long getMediaVotos() {
+		return mediaVotos;
+	}
+
+	public void setMediaVotos(long mediaVotos) {
+		this.mediaVotos = mediaVotos;
 	}
 
 }
