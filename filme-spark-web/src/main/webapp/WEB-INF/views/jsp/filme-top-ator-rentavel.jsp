@@ -42,7 +42,7 @@
 								"type" : "column",
 								"valueField" : "arrecadacaoLocal",
 								"autoColor" : true,
-								"labelText" : "ano",
+								
 								"labelPosition" : "middle"
 							} ],
 							"chartCursor" : {
