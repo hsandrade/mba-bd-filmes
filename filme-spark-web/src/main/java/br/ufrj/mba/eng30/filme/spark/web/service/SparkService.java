@@ -9,6 +9,7 @@ import org.springframework.web.client.RestTemplate;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import br.ufrj.mba.eng30.filme.spark.web.model.Ator;
 import br.ufrj.mba.eng30.filme.spark.web.model.Cliente;
 import br.ufrj.mba.eng30.filme.spark.web.model.Filme;
 import br.ufrj.mba.eng30.filme.spark.web.model.JobserverResult;
@@ -48,6 +49,15 @@ public class SparkService {
 				JobserverResult.class);
 
 		return getListResultGeneric(jobRes, Filme.class);
+	}
+	
+	public List<Ator> getTopAtorRentavel(int qtdTop) {
+		JobserverResult jobRes = restTemplate.postForObject(
+				String.format(ConstantesSpark.TEMPLATE_URL_SPARK, "TopAtorRentavel"),
+				"top=" + qtdTop,
+				JobserverResult.class);
+
+		return getListResultGeneric(jobRes, Ator.class);
 	}
 	
 	/**

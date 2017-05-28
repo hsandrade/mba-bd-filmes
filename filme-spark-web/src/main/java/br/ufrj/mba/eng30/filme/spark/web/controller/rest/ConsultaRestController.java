@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import br.ufrj.mba.eng30.filme.spark.web.model.Ator;
 import br.ufrj.mba.eng30.filme.spark.web.model.Cliente;
 import br.ufrj.mba.eng30.filme.spark.web.model.Filme;
 import br.ufrj.mba.eng30.filme.spark.web.service.SparkService;
@@ -50,7 +51,7 @@ public class ConsultaRestController {
 	}	
 	
 	@RequestMapping(value = "/rest/filmes/avaliados")
-	public List<Filme> getTopFilmeavaliados() {
+	public List<Filme> getTopFilmeAvaliados() {
 		return sparkService.getTopFilmesAvaliados(10);
 	}
 	
@@ -59,5 +60,14 @@ public class ConsultaRestController {
 		return sparkService.getTopFilmesAvaliados(qtdTop);
 	}
 	
-
+	@RequestMapping(value = "/rest/filmes/ator")
+	public List<Ator> getTopAtorRentavel() {
+		return sparkService.getTopAtorRentavel(10);
+	}
+	
+	@RequestMapping(value = "/rest/filmes/ator/{qtdTop}")
+	public List<Ator> getTopAtorRentavel(@PathVariable("qtdTop") int qtdTop) {
+		return sparkService.getTopAtorRentavel(qtdTop);
+	}
+	
 }
