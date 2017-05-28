@@ -7,7 +7,7 @@
 		class="btn btn-primary">Exibir Gráfico</button>
 </form>
 
-<div id="chartSpark"></div> 
+<div id="chartdiv"></div> 
 
 <script>
 	var chartData;
@@ -28,41 +28,36 @@
 					chartData = result;
 					//inicializar o grafico se necessario
 					/* if (chart == null) { */
-						chart = AmCharts.makeChart("chartSpark", {
-							"type" : "serial",
-							"theme" : "light",
-							"dataProvider" : chartData,
-							"startDuration" : 0.5,
-							"graphs" : [ {
-								"balloonText" : "[[category]]: <b>$[[value]]</b>",
-								"fillColorsField": "color",
-								"fillAlphas" : 0.8,
-								"lineAlpha" : 0.2,
-								"type" : "column",
-								"valueField" : "arrecadacaoLocal",
-								"autoColor" : true,
-								"labelText" : "$[[value]]",
-								"labelPosition" : "middle"
-							} ],
-							"chartCursor" : {
-								"categoryBalloonEnabled" : false,
-								"cursorAlpha" : 0,
-								"zoomable" : false
-							},
-							"categoryField" : "titulo",
-							"categoryAxis" : {
-								"gridPosition" : "start",
-								"gridAlpha" : 0,
-								"tickPosition" : "start",
-								"labelRotation": 45
-							}
-						});
-					/* }
-					else {
-						//atualizar o grafico de acordo com o json definido na variavel do dataProvider
-						chart.dataProvider = chartData;
-						chart.validateData();
-					} */
+var chart = AmCharts.makeChart("chartdiv",{
+  "type": "serial",
+  "categoryField": "titulo",
+  "categoryAxis": {
+    "gridPosition": "start"
+  },
+  "graphs": [
+    {
+      "title": "Filmes Mais Avaliados",
+      "valueField": "mediaVotos"
+          
+    }
+  ],
+  "valueAxes": [
+    {
+      "title": "Votos"
+    }
+  ],
+  "legend": {
+    "useGraphSettings": true
+  },
+  "titles": [
+    {
+      "size": 15,
+      "text": "Filmes Mais Avaliado"
+    }
+  ],
+  "dataProvider" : chartData,
+  
+});
 				},
 				complete: function() {
 					habilitarElemento(true, btGrafico);
