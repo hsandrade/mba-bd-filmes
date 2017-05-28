@@ -2,7 +2,7 @@
 
 <form name="frmSpark" id="frmSpark">
 	<label for="qtdTop">Quantidade de filmes: </label> <input name="qtdTop"
-		id="qtdTop" type="number" value="10" max="20"> <br>
+		id="qtdTop" type="number" value="5" max="20"> <br>
 	<button id="btExibirGrafico" type="button"
 		class="btn btn-primary">Exibir Gráfico</button>
 </form>

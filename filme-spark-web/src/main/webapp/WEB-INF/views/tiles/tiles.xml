@@ -41,7 +41,7 @@
 	</definition>	
 		
 	<definition name="filme-top-avaliados" extends="base-definition">
-		<put-attribute name="title" value="Top Filmes Avaliados" />
+		<put-attribute name="title" value="Top Filmes Mais Bem Avaliados" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/filme-top-avaliados.jsp" />
 	</definition>	
 	
