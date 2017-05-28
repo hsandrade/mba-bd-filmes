@@ -48,5 +48,16 @@ public class ConsultaRestController {
 	public List<Filme> getTopFilmeRentaveis(@PathVariable("qtdTop") int qtdTop) {
 		return sparkService.getTopFilmesRentaveis(qtdTop);
 	}	
+	
+	@RequestMapping(value = "/rest/filmes/avaliados")
+	public List<Filme> getTopFilmeavaliados() {
+		return sparkService.getTopFilmesAvaliados(10);
+	}
+	
+	@RequestMapping(value = "/rest/filmes/avaliados/{qtdTop}")
+	public List<Filme> getTopFilmeAvaliados(@PathVariable("qtdTop") int qtdTop) {
+		return sparkService.getTopFilmesAvaliados(qtdTop);
+	}
+	
 
 }
