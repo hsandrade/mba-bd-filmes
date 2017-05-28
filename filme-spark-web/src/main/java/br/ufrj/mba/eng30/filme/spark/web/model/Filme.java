@@ -21,7 +21,7 @@ public class Filme {
 	@SerializedName("num_voted_users")
 	private long qtdVotos;
 	@SerializedName("imdb_score")
-	private Float mediaVotos;	
+	private float mediaVotos;	
 
 	public String getTitulo() {
 		return titulo;

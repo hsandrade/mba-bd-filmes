@@ -41,6 +41,15 @@ public class SparkService {
 		return getListResultGeneric(jobRes, Filme.class);
 	}	
 
+	public List<Filme> getTopFilmesAvaliados(int qtdTop) {
+		JobserverResult jobRes = restTemplate.postForObject(
+				String.format(ConstantesSpark.TEMPLATE_URL_SPARK, "TopFilmeAvaliado"),
+				"top=" + qtdTop,
+				JobserverResult.class);
+
+		return getListResultGeneric(jobRes, Filme.class);
+	}
+	
 	/**
 	 * Retorna uma lista genérica de acordo com o resultado do job.
 	 * @param jobRes
