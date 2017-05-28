@@ -35,6 +35,7 @@
 							"startDuration" : 0.5,
 							"graphs" : [ {
 								"balloonText" : "[[category]]: <b>$[[value]]</b>",
+								"fillColorsField": "color",
 								"fillAlphas" : 0.8,
 								"lineAlpha" : 0.2,
 								"type" : "column",

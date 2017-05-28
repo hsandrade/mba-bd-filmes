@@ -6,12 +6,10 @@ AmCharts.addInitHandler(function(chart) {
 	    var graph = chart.graphs[i];
 	    if (graph.autoColor !== true)
 	      continue;
-	    var colorKey = "autoColor-"+i;
-	    graph.lineColorField = colorKey;
-	    graph.fillColorsField = colorKey;
 	    for(var x = 0; x < chart.dataProvider.length; x++) {
 	      var color = chart.colors[x]
-	      chart.dataProvider[x][colorKey] = color;
+	      //randomColor refere-se ao plugin externo randomcolor.min.js
+	      chart.dataProvider[x]["color"] = randomColor();
 	    }
 	  }
 	  
