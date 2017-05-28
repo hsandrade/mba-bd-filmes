@@ -36,6 +36,11 @@ public class HomeController {
 	@RequestMapping(value="/filme-top-rentavel", method=RequestMethod.GET)
 	public String filmeTopRentavel(ModelMap model) {
 		return "filme-top-rentavel";
+	}
+	
+	@RequestMapping(value="/filme-top-avaliados", method=RequestMethod.GET)
+	public String filmeTopAvaliados(ModelMap model) {
+		return "filme-top-avaliados";
 	}	
 	
 }
