@@ -42,7 +42,6 @@
 								"type" : "column",
 								"valueField" : "arrecadacaoLocal",
 								"autoColor" : true,
-								"labelText" : "ano",
 								"labelPosition" : "middle"
 							} ],
 							"chartCursor" : {
@@ -50,7 +49,7 @@
 								"cursorAlpha" : 0,
 								"zoomable" : false
 							},
-							"categoryField" : "nome", 
+							"categoryField" : "nome",
 							"categoryAxis" : {
 								"gridPosition" : "start",
 								"gridAlpha" : 0,
