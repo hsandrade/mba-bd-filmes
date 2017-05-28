@@ -7,7 +7,7 @@ public interface ConstantesSpark {
 	 * tendo como ponto de altera&ccedil;&atilde;o o nome da classe a 
 	 * ser processada.
 	 */
-	String TEMPLATE_URL_SPARK = "http://54.190.0.205:8090/jobs"
+	String TEMPLATE_URL_SPARK = "http://54.200.116.126:8090/jobs"
 			+ "?appName=servico-filme2"
 			+ "&context=mba-context"
 			+ "&classPath=br.ufrj.mba.eng30.filme.spark.servico.%s"
