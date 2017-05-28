@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  * Classe principal do Filme.
- * 
+ *  
  * @author Luiz Eduardo
  *
  */
