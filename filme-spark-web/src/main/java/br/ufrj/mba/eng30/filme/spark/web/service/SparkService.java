@@ -3,12 +3,14 @@ package br.ufrj.mba.eng30.filme.spark.web.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import br.ufrj.mba.eng30.filme.spark.web.dao.SparkDAO;
 import br.ufrj.mba.eng30.filme.spark.web.model.Ator;
 import br.ufrj.mba.eng30.filme.spark.web.model.Cliente;
 import br.ufrj.mba.eng30.filme.spark.web.model.Diretor;
@@ -25,6 +27,9 @@ import br.ufrj.mba.eng30.filme.spark.web.model.JobserverResult;
 public class SparkService {
 	private RestTemplate restTemplate = new RestTemplate();
 	private Gson gson = new GsonBuilder().create();
+	
+	@Autowired
+	private SparkDAO sparkDao;
 	
 	public List<Cliente> getClientes() {
 		JobserverResult jobRes = restTemplate.postForObject(
@@ -78,6 +83,14 @@ public class SparkService {
 				JobserverResult.class);
 
 		return getListResultGeneric(jobRes, Filme.class);
+	}	
+	
+	/**
+	 * Retorna os dados gerados na tabela pelo Spark em outro servi&ccedil;o.
+	 * @return
+	 */
+	public List<Filme> getFilmesBanco() {
+		return sparkDao.getFilmesRentaveis();
 	}	
 	
 	public List<Diretor> getDiretores() {

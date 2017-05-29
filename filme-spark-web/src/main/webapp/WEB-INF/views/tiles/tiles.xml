@@ -58,6 +58,11 @@
 	<definition name="diretor-ator" extends="base-definition">
 		<put-attribute name="title" value="Top atores rentáveis por Diretor" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/diretor-ator.jsp" />
+	</definition>	
+	
+	<definition name="filme-top-rentavel-banco" extends="base-definition">
+		<put-attribute name="title" value="Top Filmes Rentáveis (Banco de Dados)" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/filme-top-rentavel-banco.jsp" />
 	</definition>		
 
 </tiles-definitions>

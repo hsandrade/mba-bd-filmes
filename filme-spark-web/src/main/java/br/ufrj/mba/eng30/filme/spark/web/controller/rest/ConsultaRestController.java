@@ -70,4 +70,9 @@ public class ConsultaRestController {
 		return sparkService.getAtoresDiretor(diretor, qtdAtor);
 	}	
 	
+	@RequestMapping(value = "/rest/filmes/banco")
+	public List<Filme> getFilmesBanco() {
+		return sparkService.getFilmesBanco();
+	}	
+	
 }

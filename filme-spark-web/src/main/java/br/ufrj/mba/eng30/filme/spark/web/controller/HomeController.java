@@ -20,6 +20,11 @@ public class HomeController {
 		return "filme-top-rentavel";
 	}
 	
+	@RequestMapping(value="/filme-top-rentavel-banco", method=RequestMethod.GET)
+	public String filmeTopRentavelBanco(ModelMap model) {
+		return "filme-top-rentavel-banco";
+	}
+	
 	@RequestMapping(value="/filme-top-avaliados", method=RequestMethod.GET)
 	public String filmeTopAvaliados(ModelMap model) {
 		return "filme-top-avaliados";
