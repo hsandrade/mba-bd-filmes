@@ -34,7 +34,6 @@
 							"dataProvider" : chartData,
 							"startDuration" : 0.5,
 							"graphs" : [ {
-							
 								"balloonText" : "[[category]]: <b>$[[value]]</b>",	
 								"fillColorsField": "color",
 								"fillAlphas" : 0.8,
@@ -42,8 +41,8 @@
 								"type" : "column",
 								"valueField" : "arrecadacaoLocal",
 								"autoColor" : true,
-								"labelPosition" : "middle"
-									
+								"labelPosition" : "middle",
+								"labelText" : "$[[value]]"
 							} ],
 							"chartCursor" : {
 								"categoryBalloonEnabled" : false,
@@ -72,6 +71,8 @@
 				}
 			});
 		});
+
+		btGrafico.trigger('click');
 	});
 
 </script>

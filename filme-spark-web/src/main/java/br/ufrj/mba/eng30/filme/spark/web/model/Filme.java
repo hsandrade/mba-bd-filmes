@@ -42,6 +42,9 @@ public class Filme {
 	}
 
 	public String getGeneros() {
+		if (generos != null) {
+			return generos.replaceAll("\\|", ", ");
+		}
 		return generos;
 	}
 

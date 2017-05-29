@@ -95,6 +95,8 @@
 				}
 			});
 		});
+
+		btGrafico.trigger('click');
 	});
 
 </script>

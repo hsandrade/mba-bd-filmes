@@ -9,7 +9,9 @@ AmCharts.addInitHandler(function(chart) {
 	    for(var x = 0; x < chart.dataProvider.length; x++) {
 	      var color = chart.colors[x]
 	      //randomColor refere-se ao plugin externo randomcolor.min.js
-	      chart.dataProvider[x]["color"] = randomColor();
+	      chart.dataProvider[x]["color"] = randomColor({
+	    	   luminosity: 'light',
+	    	   hue: 'random'});
 	    }
 	  }
 	  

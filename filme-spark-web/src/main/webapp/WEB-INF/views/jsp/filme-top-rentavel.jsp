@@ -32,7 +32,7 @@
 							"type" : "serial",
 							"theme" : "light",
 							"dataProvider" : chartData,
-							"startDuration" : 0.5,
+							"startDuration" : 1,
 							"graphs" : [ {
 								"balloonText" : "[[category]]: <b>$[[value]]</b>",
 								"fillColorsField": "color",
@@ -46,6 +46,8 @@
 								"labelText" : "$[[value]]",
 								"labelPosition" : "middle"
 							} ],
+							"depth3D": 15,
+							"angle": 30,							
 							"chartCursor" : {
 								"categoryBalloonEnabled" : false,
 								"cursorAlpha" : 0,
@@ -72,6 +74,8 @@
 				}
 			});
 		});
+
+		btGrafico.trigger('click');
 	});
 
 </script>

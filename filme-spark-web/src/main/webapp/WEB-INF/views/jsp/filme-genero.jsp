@@ -47,6 +47,7 @@
 							selGeneros.append("<option>" + result[i].nome
 									+ "</option>")
 						}
+						btExibir.trigger('click');
 					},
 					complete : function() {
 						habilitarElemento(true, selGeneros);
@@ -54,6 +55,11 @@
 						exibirLoadingBotao(false, divLoadGenero);
 					}
 				})
+				
+				selGeneros.on("change", function() {
+					btExibir.trigger('click');
+				});
+				
 
 				btExibir.on("click", function() {
 
