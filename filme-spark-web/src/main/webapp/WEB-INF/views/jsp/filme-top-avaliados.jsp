@@ -36,7 +36,7 @@ var chart = AmCharts.makeChart("chartdiv",{
   },
   "graphs": [
     {
-      "title": "Filmes Mais Avaliados",
+      "title": "Filmes Mais Bem Avaliados",
       "valueField": "mediaVotos"
           
     }
