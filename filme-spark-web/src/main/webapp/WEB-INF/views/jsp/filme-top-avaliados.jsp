@@ -26,8 +26,6 @@
 				},
 				success : function(result) {
 					chartData = result;
-					//inicializar o grafico se necessario
-					/* if (chart == null) { */
 					chart = AmCharts.makeChart("chartSpark",{
 						"type" : "serial",
 						"theme" : "light",

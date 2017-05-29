@@ -42,14 +42,15 @@
 								"type" : "column",
 								"valueField" : "arrecadacaoLocal",
 								"autoColor" : true,
-								
 								"labelPosition" : "middle"
+									
 							} ],
 							"chartCursor" : {
 								"categoryBalloonEnabled" : false,
 								"cursorAlpha" : 0,
 								"zoomable" : false
 							},
+							
 							"categoryField" : "nome",
 							"categoryAxis" : {
 								"gridPosition" : "start",
