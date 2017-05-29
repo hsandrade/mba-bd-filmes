@@ -12,6 +12,7 @@ import com.google.gson.GsonBuilder;
 import br.ufrj.mba.eng30.filme.spark.web.model.Ator;
 import br.ufrj.mba.eng30.filme.spark.web.model.Cliente;
 import br.ufrj.mba.eng30.filme.spark.web.model.Filme;
+import br.ufrj.mba.eng30.filme.spark.web.model.Genero;
 import br.ufrj.mba.eng30.filme.spark.web.model.JobserverResult;
 
 /**
@@ -59,6 +60,24 @@ public class SparkService {
 
 		return getListResultGeneric(jobRes, Ator.class);
 	}
+	
+	public List<Genero> getGeneros() {
+		JobserverResult jobRes = restTemplate.postForObject(
+				String.format(ConstantesSpark.TEMPLATE_URL_SPARK, "NormalizaGenero"),
+				"param=abc",
+				JobserverResult.class);
+
+		return getListResultGeneric(jobRes, Genero.class);
+	}	
+	
+	public List<Filme> getFilmesGenero(String genero) {
+		JobserverResult jobRes = restTemplate.postForObject(
+				String.format(ConstantesSpark.TEMPLATE_URL_SPARK, "FilmeGenero"),
+				"genero=" + genero,
+				JobserverResult.class);
+
+		return getListResultGeneric(jobRes, Filme.class);
+	}	
 	
 	/**
 	 * Retorna uma lista genérica de acordo com o resultado do job.

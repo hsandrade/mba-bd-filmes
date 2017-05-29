@@ -20,6 +20,7 @@
 <script src="static/js/plugin/amcharts/dataloader.min.js"></script>
 <script src="static/js/plugin/amcharts/light.js"></script>
 <script src="static/js/plugin/randomcolor.min.js"></script>
+<script src="static/js/plugin/numeral.min.js"></script>
 <script src="static/js/filme-default.js"></script>
 </head>
 
@@ -33,7 +34,7 @@
 			<div class="col-sm-3 col-md-2 sidebar">
 				<tiles:insertAttribute name="menu" />
 			</div>
-			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<div class="col-sm-12 main">
 				<div class="page-header">
 					<h1><tiles:getAsString name="title" /></h1>
 				</div>

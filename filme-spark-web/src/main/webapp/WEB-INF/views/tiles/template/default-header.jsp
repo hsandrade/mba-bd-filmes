@@ -11,7 +11,7 @@
 			<a href="${pageContext.request.contextPath}/">Exibir Logotipo</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
-			<ul class="nav navbar-nav navbar-right">
+			<ul class="nav navbar-nav navbar-left">
 				<%@ include file="menu-itens.jsp"%>
 			</ul>
 		</div>

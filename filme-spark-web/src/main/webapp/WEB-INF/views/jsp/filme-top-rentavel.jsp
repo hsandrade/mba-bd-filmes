@@ -40,6 +40,8 @@
 								"lineAlpha" : 0.2,
 								"type" : "column",
 								"valueField" : "arrecadacaoLocal",
+								"urlField": "urlImdb",
+								"urlTarget": "_blank",								
 								"autoColor" : true,
 								"labelText" : "$[[value]]",
 								"labelPosition" : "middle"

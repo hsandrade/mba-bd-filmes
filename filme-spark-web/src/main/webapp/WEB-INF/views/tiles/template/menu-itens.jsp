@@ -1,5 +1,4 @@
-<li><a href="${pageContext.request.contextPath}/">Home</a></li>
 <li><a href="${pageContext.request.contextPath}/filme-top-rentavel">Filmes mais Rentáveis</a></li>
-<li><a href="${pageContext.request.contextPath}/filme-top-avaliados">Filmes Mais Bem Avaliados</a></li>
-<li><a href="${pageContext.request.contextPath}/filme-top-ator-rentavel">Atores Mais Rentáveis</a></li>
-<li><a href="${pageContext.request.contextPath}/teste-rest-spark">Teste REST Spark</a></li>		
+<li><a href="${pageContext.request.contextPath}/filme-top-avaliados">Filmes mais Votados</a></li>
+<li><a href="${pageContext.request.contextPath}/filme-top-ator-rentavel">Atores mais Rentáveis</a></li>
+<li><a href="${pageContext.request.contextPath}/filme-genero">Filmes por Gênero</a></li>

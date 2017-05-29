@@ -22,6 +22,8 @@ public class Filme {
 	private long qtdVotos;
 	@SerializedName("imdb_score")
 	private float mediaVotos;	
+	@SerializedName("movie_imdb_link")
+	private String urlImdb;	
 
 	public String getTitulo() {
 		return titulo;
@@ -69,6 +71,14 @@ public class Filme {
 
 	public void setMediaVotos(float mediaVotos) {
 		this.mediaVotos = mediaVotos;
+	}
+
+	public String getUrlImdb() {
+		return urlImdb;
+	}
+
+	public void setUrlImdb(String urlImdb) {
+		this.urlImdb = urlImdb;
 	}
 
 }
