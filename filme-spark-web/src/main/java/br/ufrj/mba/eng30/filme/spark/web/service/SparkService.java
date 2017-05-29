@@ -11,6 +11,7 @@ import com.google.gson.GsonBuilder;
 
 import br.ufrj.mba.eng30.filme.spark.web.model.Ator;
 import br.ufrj.mba.eng30.filme.spark.web.model.Cliente;
+import br.ufrj.mba.eng30.filme.spark.web.model.Diretor;
 import br.ufrj.mba.eng30.filme.spark.web.model.Filme;
 import br.ufrj.mba.eng30.filme.spark.web.model.Genero;
 import br.ufrj.mba.eng30.filme.spark.web.model.JobserverResult;
@@ -77,6 +78,24 @@ public class SparkService {
 				JobserverResult.class);
 
 		return getListResultGeneric(jobRes, Filme.class);
+	}	
+	
+	public List<Diretor> getDiretores() {
+		JobserverResult jobRes = restTemplate.postForObject(
+				String.format(ConstantesSpark.TEMPLATE_URL_SPARK, "TopDiretor"),
+				"top=10",
+				JobserverResult.class);
+
+		return getListResultGeneric(jobRes, Diretor.class);
+	}
+	
+	public List<Ator> getAtoresDiretor(String diretor, int topAtores) {
+		JobserverResult jobRes = restTemplate.postForObject(
+				String.format(ConstantesSpark.TEMPLATE_URL_SPARK, "TopDiretorAtor"),
+				"params=" + diretor + ";" + topAtores,
+				JobserverResult.class);
+
+		return getListResultGeneric(jobRes, Ator.class);
 	}	
 	
 	/**

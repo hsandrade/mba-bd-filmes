@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.ufrj.mba.eng30.filme.spark.web.model.Ator;
+import br.ufrj.mba.eng30.filme.spark.web.model.Diretor;
 import br.ufrj.mba.eng30.filme.spark.web.model.Filme;
 import br.ufrj.mba.eng30.filme.spark.web.model.Genero;
 import br.ufrj.mba.eng30.filme.spark.web.service.SparkService;
@@ -56,6 +57,17 @@ public class ConsultaRestController {
 	@RequestMapping(value = "/rest/filmes/genero/{genero}")
 	public List<Filme> getFilmesGenero(@PathVariable("genero") String genero) {
 		return sparkService.getFilmesGenero(genero);
+	}	
+	
+	@RequestMapping(value = "/rest/diretores")
+	public List<Diretor> getDiretores() {
+		return sparkService.getDiretores();
+	}	
+	
+	@RequestMapping(value = "/rest/filmes/diretor/{diretor}/{qtdAtor}")
+	public List<Ator> getAtoresDiretor(@PathVariable("diretor") String diretor,
+			@PathVariable("qtdAtor") int qtdAtor) {
+		return sparkService.getAtoresDiretor(diretor, qtdAtor);
 	}	
 	
 }

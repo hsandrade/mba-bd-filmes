@@ -54,5 +54,10 @@
 		<put-attribute name="title" value="Filmes por Gênero (filtro)" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/filme-genero.jsp" />
 	</definition>	
+	
+	<definition name="diretor-ator" extends="base-definition">
+		<put-attribute name="title" value="Top atores rentáveis por Diretor" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/diretor-ator.jsp" />
+	</definition>		
 
 </tiles-definitions>

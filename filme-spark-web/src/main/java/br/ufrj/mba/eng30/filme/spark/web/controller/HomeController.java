@@ -34,4 +34,9 @@ public class HomeController {
 	public String filmeGenero(ModelMap model) {
 		return "filme-genero";
 	}	
+	
+	@RequestMapping(value="/diretor-ator", method=RequestMethod.GET)
+	public String diretorAtor(ModelMap model) {
+		return "diretor-ator";
+	}	
 }
