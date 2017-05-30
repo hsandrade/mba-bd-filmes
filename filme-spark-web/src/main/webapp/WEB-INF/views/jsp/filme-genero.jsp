@@ -16,10 +16,10 @@
 		<thead>
 			<tr>
 				<th>Título</th>
-				<th align='right'>Ano</th>
-				<th align='right'>Arrecadação ($)</th>
+				<th style="text-align:right">Ano</th>
+				<th style="text-align:right">Arrecadação ($)</th>
 				<th>Gêneros</th>
-				<th align='right'>Média votos</th>
+				<th style="text-align:right">Média votos</th>
 				<th>Link IMDB</th>				
 			</tr>
 		</thead>
