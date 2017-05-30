@@ -78,7 +78,7 @@
 								var filme = result[i];
 
 								var registro = "<tr><td>" + filme.titulo + "</td><td align='right'>" + filme.ano + "</td>" 
-								+ "<td align='right'>" + numeral(filme.arrecadacaoLocal).format('$0,0') + "</td>"
+								+ "<td align='right'>" + numeral(filme.arrecadacaoLocal).format('0,0') + "</td>"
 								+ "<td>" + filme.generos + "</td><td align='right'>" + filme.mediaVotos + "</td>"
 								+ "<td><a href='" + filme.urlImdb + "' target='_blank'>" + filme.urlImdb + "</a></td></tr>";
 								
