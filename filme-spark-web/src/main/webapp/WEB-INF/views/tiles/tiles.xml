@@ -25,43 +25,39 @@
 		<put-attribute name="body" value="/WEB-INF/views/jsp/index.jsp" />
 	</definition>
 
-	<definition name="outra-pagina" extends="base-definition">
-		<put-attribute name="title" value="Outra página" />
-		<put-attribute name="body" value="/WEB-INF/views/jsp/outra-pagina.jsp" />
-	</definition>
-	
-	<definition name="teste-rest-spark" extends="base-definition">
-		<put-attribute name="title" value="Teste resultado REST do Spark" />
-		<put-attribute name="body" value="/WEB-INF/views/jsp/teste-rest-spark.jsp" />
-	</definition>
-	
 	<definition name="filme-top-rentavel" extends="base-definition">
 		<put-attribute name="title" value="Top Filmes Rentáveis" />
+		<put-attribute name="urlCodFonte" value="https://codebunk.com/b/463141940/" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/filme-top-rentavel.jsp" />
 	</definition>	
 		
 	<definition name="filme-top-avaliados" extends="base-definition">
 		<put-attribute name="title" value="Top Filmes Mais Votados" />
+		<put-attribute name="urlCodFonte" value="https://codebunk.com/b/897141942/" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/filme-top-avaliados.jsp" />
 	</definition>	
 	
 	<definition name="filme-top-ator-rentavel" extends="base-definition">
 		<put-attribute name="title" value="Top Atores Rentáveis" />
+		<put-attribute name="urlCodFonte" value="https://codebunk.com/b/311141945/" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/filme-top-ator-rentavel.jsp" />
 	</definition>
 	
 	<definition name="filme-genero" extends="base-definition">
 		<put-attribute name="title" value="Filmes por Gênero (filtro)" />
+		<put-attribute name="urlCodFonte" value="https://codebunk.com/b/525141947/" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/filme-genero.jsp" />
 	</definition>	
 	
 	<definition name="diretor-ator" extends="base-definition">
 		<put-attribute name="title" value="Top atores rentáveis por Diretor" />
+		<put-attribute name="urlCodFonte" value="https://codebunk.com/b/651141943/" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/diretor-ator.jsp" />
 	</definition>	
 	
 	<definition name="filme-top-rentavel-banco" extends="base-definition">
 		<put-attribute name="title" value="Top Filmes Rentáveis (Banco de Dados)" />
+		<put-attribute name="urlCodFonte" value="https://codebunk.com/b/580141952/" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/filme-top-rentavel-banco.jsp" />
 	</definition>		
 

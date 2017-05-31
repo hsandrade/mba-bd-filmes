@@ -36,7 +36,14 @@
 			</div>
 			<div class="col-sm-12 main">
 				<div class="page-header">
-					<h1><tiles:getAsString name="title" /></h1>
+					<h1>
+						<tiles:getAsString name="title" />
+						<a href="<tiles:getAsString name='urlCodFonte' />" 
+								class="btn btn-info" 
+								target="_blank">
+							[Código fonte]
+						</a>
+					</h1>
 				</div>
 				<tiles:insertAttribute name="body" />
 			</div>
