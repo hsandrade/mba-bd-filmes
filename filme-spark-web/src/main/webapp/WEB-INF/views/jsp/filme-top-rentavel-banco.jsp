@@ -33,6 +33,7 @@
 							"fillAlphas" : 0.8,
 							"lineAlpha" : 0.2,
 							"type" : "column",
+							"topRadius":1,
 							"valueField" : "arrecadacaoLocal",
 							"urlField": "urlImdb",
 							"urlTarget": "_blank",								
@@ -40,8 +41,8 @@
 							"labelText" : "$[[value]]",
 							"labelPosition" : "middle"
 						} ],
-						"depth3D": 15,
-						"angle": 30,							
+					    "depth3D": 40,
+						"angle": 30,						
 						"chartCursor" : {
 							"categoryBalloonEnabled" : false,
 							"cursorAlpha" : 0,

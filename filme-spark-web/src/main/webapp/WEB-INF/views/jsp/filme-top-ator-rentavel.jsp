@@ -27,43 +27,22 @@
 				success : function(result) {
 					chartData = result;
 					//inicializar o grafico se necessario
-					/* if (chart == null) { */
-						chart = AmCharts.makeChart("chartSpark", {
-							"type" : "serial",
-							"theme" : "light",
-							"dataProvider" : chartData,
-							"startDuration" : 0.5,
-							"graphs" : [ {
-								"balloonText" : "[[category]]: <b>$[[value]]</b>",	
-								"fillColorsField": "color",
-								"fillAlphas" : 0.8,
-								"lineAlpha" : 0.2,
-								"type" : "column",
-								"valueField" : "arrecadacaoLocal",
-								"autoColor" : true,
-								"labelPosition" : "middle",
-								"labelText" : "$[[value]]"
-							} ],
-							"chartCursor" : {
-								"categoryBalloonEnabled" : false,
-								"cursorAlpha" : 0,
-								"zoomable" : false
-							},
-							
-							"categoryField" : "nome",
-							"categoryAxis" : {
-								"gridPosition" : "start",
-								"gridAlpha" : 0,
-								"tickPosition" : "start",
-								"labelRotation": 45
-							}
-						});
-					/* }
-					else {
-						//atualizar o grafico de acordo com o json definido na variavel do dataProvider
-						chart.dataProvider = chartData;
-						chart.validateData();
-					} */
+					chart = AmCharts.makeChart("chartSpark", {
+						"type" : "pie",
+						"theme" : "light",
+						"dataProvider" : chartData,
+						"startDuration" : 0.5,
+						"balloonText" : "[[title]]: <b>$[[value]]</b>",	
+						"fillColorsField": "color",
+						"fillAlphas" : 0.8,
+						"lineAlpha" : 0.2,
+						"outlineAlpha": 0.4,
+						"depth3D": 15,
+						"angle": 30,
+						"valueField" : "arrecadacaoLocal",
+						"autoColor" : true,
+						"titleField": "nome"							
+					});
 				},
 				complete: function() {
 					habilitarElemento(true, btGrafico);

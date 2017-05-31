@@ -17,6 +17,7 @@
 <script src="static/js/plugin/bootstrap.min.js"></script>
 <script src="static/js/plugin/amcharts/amcharts.js"></script>
 <script src="static/js/plugin/amcharts/serial.js"></script>
+<script src="static/js/plugin/amcharts/pie.js"></script>
 <script src="static/js/plugin/amcharts/dataloader.min.js"></script>
 <script src="static/js/plugin/amcharts/light.js"></script>
 <script src="static/js/plugin/randomcolor.min.js"></script>
