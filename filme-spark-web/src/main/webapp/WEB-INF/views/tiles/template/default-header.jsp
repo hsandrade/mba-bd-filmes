@@ -9,6 +9,7 @@
 					class="icon-bar"></span>
 			</button>
 			<%-- <a href="${pageContext.request.contextPath}/">Exibir Logotipo</a> --%>
+				<!-- <img src="/static/img/imdb.png"/> -->
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-left">
